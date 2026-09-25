@@ -1208,3 +1208,126 @@ body.dark .final-message {
         grid-template-columns: 1fr;
     }
 }
+/* =========================
+   МОЙ ПУТЬ
+========================= */
+
+.journey-section {
+    margin-top: 28px;
+}
+
+.journey-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.journey-title > span {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.45;
+}
+
+.journey-title h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.journey-title p {
+    margin: 3px 0 0;
+    font-size: 12px;
+    opacity: 0.55;
+}
+
+.journey-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    left: 48px;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background: var(--border-color);
+}
+
+.journey-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.journey-year {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.5;
+    text-align: right;
+}
+
+.journey-card {
+    padding: 15px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    transition: 0.25s ease;
+}
+
+.journey-card:hover {
+    transform: translateX(4px);
+}
+
+.journey-card h4 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+.journey-card p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.6;
+}
+
+/* Точка на линии */
+
+.journey-item::before {
+    content: "";
+    position: absolute;
+    left: 44px;
+    width: 7px;
+    height: 7px;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    background: var(--bg-color);
+    z-index: 2;
+}
+
+/* Телефон */
+
+@media (max-width: 600px) {
+
+    .journey-item {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+    }
+
+    .journey-timeline::before {
+        left: 39px;
+    }
+
+    .journey-item::before {
+        left: 35px;
+    }
+
+    .journey-card {
+        padding: 13px;
+    }
+}
