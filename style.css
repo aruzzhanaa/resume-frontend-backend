@@ -1125,3 +1125,86 @@ body.dark .final-message {
         margin: 5px;
     }
 }
+/* =========================
+   СЕЙЧАС ИЗУЧАЮ
+========================= */
+
+.learning-section {
+    margin-top: 35px;
+}
+
+.learning-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.learning-title > span {
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.learning-title h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.learning-title p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.learning-card {
+    position: relative;
+    padding: 22px;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    background: var(--card-bg);
+    transition: 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-5px);
+}
+
+.learning-number {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.45;
+    margin-bottom: 18px;
+}
+
+.learning-card h4 {
+    margin: 0 0 8px;
+    font-size: 17px;
+}
+
+.learning-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.65;
+}
+
+/* Адаптация под телефон */
+
+@media (max-width: 900px) {
+    .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+}
