@@ -1366,7 +1366,7 @@ body.dark .final-message {
     border: 1px dashed var(--border-color);
 }
 
-.active {
+#myElement.active {
     background: black;
     color: white;
     padding: 20px;
